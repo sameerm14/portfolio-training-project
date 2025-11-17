@@ -356,7 +356,6 @@ header {
         max-width: 350px;
     }
 }
-
 /* SKILLS SECTION */
 .skills {
     padding: 60px 10%;
@@ -370,6 +369,7 @@ header {
     margin-bottom: 40px;
 }
 
+/* Skills Grid */
 .skills-container {
     display: flex;
     justify-content: center;
@@ -377,19 +377,32 @@ header {
     gap: 25px;
 }
 
+/* Skill Box */
 .skill-box {
-    padding: 20px 30px;
+    width: 120px;
+    height: 120px;
     border: 1px solid #E5E7EB;
-    border-radius: 8px;
+    border-radius: 10px;
     background: #ffffff;
-    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    padding: 10px;
 }
 
+/* Image inside h3 */
 .skill-box h3 {
-    color: #3B82F6;
-    font-size: 1.2rem;
+    margin: 0;
 }
 
+.skill-box h3 img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* Hover Effect */
 .skill-box:hover {
     border-color: #3B82F6;
     transform: translateY(-5px);
@@ -398,6 +411,28 @@ header {
 @media (max-width: 768px) {
     .skills {
         padding: 50px 5%;
+    }
+
+    .skill-box {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skill-box h3 img {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-box {
+        width: 90px;
+        height: 90px;
+    }
+
+    .skill-box h3 img {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -552,51 +587,70 @@ header {
     margin-top: 40px;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 22px;
     flex-wrap: wrap;
 }
 
 .social-links a {
-    padding: 10px 20px;
-    border: 1px solid #3B82F6;
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: #3B82F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 2px solid #3B82F6;
+    border-radius: 50%;
+    background: #ffffff;
     transition: 0.3s ease;
 }
 
+.social-links a img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* Hover Effect */
 .social-links a:hover {
     background: #3B82F6;
-    color: #ffffff;
     border-color: #3B82F6;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+}
+
+.social-links a:hover img {
+    filter: brightness(0) invert(1); /* Make icons white on hover */
 }
 @media (max-width: 768px) {
     .social-links {
-        gap: 15px;
+        gap: 18px;
     }
 
     .social-links a {
-        padding: 9px 18px;
-        font-size: 1rem;
+        width: 44px;
+        height: 44px;
+    }
+
+    .social-links a img {
+        width: 20px;
+        height: 20px;
     }
 }
 
 @media (max-width: 480px) {
     .social-links {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
+        gap: 15px;
     }
 
     .social-links a {
-        width: 100%;
-        max-width: 260px;
-        text-align: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .social-links a img {
+        width: 18px;
+        height: 18px;
     }
 }
+
 
 /* FOOTER */
 .footer {
