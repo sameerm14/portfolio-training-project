@@ -109,11 +109,13 @@ header {
     background: #ffffff;
     display: flex;
     align-items: center;
-    padding: 120px 10% 80px; /* top | left-right | bottom */
-    height: auto; /* FIXED */
+    justify-content: space-between;
+    padding: 120px 10% 80px;
+    gap: 40px;
+    height: auto;
 }
 
-
+/* HERO TEXT */
 .hero-content h1 {
     font-size: 3.5rem;
     color: #000000;
@@ -153,9 +155,30 @@ header {
     background: #1D4ED8;
 }
 
-/* ----------------------------- */
-/*        RESPONSIVE DESIGN      */
-/* ----------------------------- */
+/* ---------- HERO IMAGE SECTION ---------- */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 380px;
+    max-width: 100%;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* --------------------------------------- */
+/*              RESPONSIVE DESIGN          */
+/* --------------------------------------- */
 
 /* Tablets */
 @media (max-width: 992px) {
@@ -178,12 +201,11 @@ header {
 
 /* Mobile */
 @media (max-width: 768px) {
-
     .hero {
-        height: auto;
-        padding: 80px 5%;
+        flex-direction: column;
         text-align: center;
         justify-content: center;
+        padding: 80px 5%;
     }
 
     .hero-content h1 {
@@ -203,6 +225,11 @@ header {
         padding: 10px 25px;
         font-size: 1rem;
     }
+
+    .hero-image img {
+        width: 280px;
+        margin-top: 30px;
+    }
 }
 
 /* Small Mobile */
@@ -219,6 +246,7 @@ header {
         font-size: 0.9rem;
     }
 }
+
 
 /* ABOUT SECTION */
 .about {
