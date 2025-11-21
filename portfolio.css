@@ -1,26 +1,24 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
-     overflow-x: hidden;
+    overflow-x: hidden;
 }
-/* GLOBAL PAGE BACKGROUND */
 
 body {
-   background: wheat;
+    background: wheat;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif; /* Optional but looks modern */
-     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
 
 section:nth-child(even) {
     background: #F7F7F7;
 }
 
-
-/* NAVBAR BASE */
 header {
     width: 100%;
     background: #111;
@@ -34,12 +32,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-   padding: 18px 5%; 
-    max-width: 100%;    
+    padding: 18px 5%;
+    max-width: 100%;
     overflow: hidden;
 }
 
-.logo a{
+.logo a {
     font-size: 1.8rem;
     font-weight: 700;
     color: #ffffff;
@@ -47,7 +45,6 @@ header {
     text-decoration: none;
 }
 
-/* NAV LINKS */
 .nav-links {
     list-style: none;
     display: flex;
@@ -66,7 +63,6 @@ header {
     color: #3B82F6;
 }
 
-/* HAMBURGER */
 .hamburger {
     display: none;
     font-size: 2rem;
@@ -74,12 +70,10 @@ header {
     cursor: pointer;
 }
 
-/* HIDE THE CHECKBOX */
 #menu-toggle {
     display: none;
 }
 
-/* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
 
     .hamburger {
@@ -99,12 +93,11 @@ header {
         display: none;
     }
 
-    #menu-toggle:checked ~ .nav-links {
+    #menu-toggle:checked~.nav-links {
         display: flex;
     }
 }
 
-/* HERO SECTION */
 .hero {
     background: #ffffff;
     display: flex;
@@ -115,7 +108,6 @@ header {
     height: auto;
 }
 
-/* HERO TEXT */
 .hero-content h1 {
     font-size: 3.5rem;
     color: #000000;
@@ -139,7 +131,6 @@ header {
     margin-bottom: 25px;
 }
 
-/* BUTTON */
 .hero-btn {
     display: inline-block;
     background: #3B82F6;
@@ -155,8 +146,6 @@ header {
     background: #1D4ED8;
 }
 
-/* ---------- HERO IMAGE SECTION ---------- */
-
 .hero-image {
     flex: 1;
     display: flex;
@@ -169,18 +158,20 @@ header {
     animation: float 3s ease-in-out infinite;
 }
 
-/* FLOAT ANIMATION */
 @keyframes float {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-12px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
-/* --------------------------------------- */
-/*              RESPONSIVE DESIGN          */
-/* --------------------------------------- */
-
-/* Tablets */
 @media (max-width: 992px) {
     .hero {
         padding: 0 8%;
@@ -199,7 +190,6 @@ header {
     }
 }
 
-/* Mobile */
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -232,7 +222,6 @@ header {
     }
 }
 
-/* Small Mobile */
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 2rem;
@@ -247,10 +236,8 @@ header {
     }
 }
 
-
-/* ABOUT SECTION */
 .about {
-    padding: 40px 10%;  /* Reduced spacing */
+    padding: 40px 10%;
     background: #ffffff;
     text-align: center;
 }
@@ -268,7 +255,6 @@ header {
     font-size: 1.1rem;
 }
 
-/* BOXES */
 .about-info {
     display: flex;
     justify-content: center;
@@ -294,7 +280,6 @@ header {
     color: #4B5563;
 }
 
-/* Hover */
 .info-box:hover {
     border-color: #3B82F6;
     transform: translateY(-5px);
@@ -304,18 +289,19 @@ header {
     .about {
         padding: 35px 5%;
     }
+
     .about h2 {
         font-size: 2rem;
     }
+
     .info-box {
         width: 100%;
         max-width: 350px;
     }
 }
 
-/* PROJECTS SECTION */
 .projects {
-    padding: 50px 10%; /* Reduced spacing */
+    padding: 50px 10%;
     background: #ffffff;
     text-align: center;
 }
@@ -326,7 +312,6 @@ header {
     margin-bottom: 35px;
 }
 
-/* PROJECT CARDS */
 .projects-container {
     display: flex;
     justify-content: center;
@@ -353,7 +338,6 @@ header {
     margin-bottom: 20px;
 }
 
-/* BUTTON */
 .project-btn {
     display: inline-block;
     background: #3B82F6;
@@ -369,7 +353,6 @@ header {
     background: #1D4ED8;
 }
 
-/* CARD HOVER */
 .project-card:hover {
     border-color: #3B82F6;
     transform: translateY(-6px);
@@ -379,12 +362,13 @@ header {
     .projects {
         padding: 45px 5%;
     }
+
     .project-card {
         width: 100%;
         max-width: 350px;
     }
 }
-/* SKILLS SECTION */
+
 .skills {
     padding: 60px 10%;
     background: #ffffff;
@@ -397,7 +381,6 @@ header {
     margin-bottom: 40px;
 }
 
-/* Skills Grid */
 .skills-container {
     display: flex;
     justify-content: center;
@@ -405,7 +388,6 @@ header {
     gap: 25px;
 }
 
-/* Skill Box */
 .skill-box {
     width: 120px;
     height: 120px;
@@ -419,7 +401,6 @@ header {
     padding: 10px;
 }
 
-/* Image inside h3 */
 .skill-box h3 {
     margin: 0;
 }
@@ -430,7 +411,6 @@ header {
     object-fit: contain;
 }
 
-/* Hover Effect */
 .skill-box:hover {
     border-color: #3B82F6;
     transform: translateY(-5px);
@@ -464,8 +444,6 @@ header {
     }
 }
 
-
-/* CONTACT SECTION */
 .contact {
     padding: 60px 10%;
     background: #ffffff;
@@ -487,8 +465,6 @@ header {
     margin-right: auto;
 }
 
-/* FORM */
-/* CONTACT SECTION */
 .contact {
     padding: 60px 10%;
     background: #ffffff;
@@ -509,7 +485,6 @@ header {
     font-size: 1.1rem;
 }
 
-/* CONTACT FORM */
 .contact-form {
     max-width: 600px;
     width: 100%;
@@ -556,14 +531,12 @@ header {
     background: #1D4ED8;
 }
 
-/* 📱 TABLET */
 @media (max-width: 992px) {
     .contact {
         padding: 50px 8%;
     }
 }
 
-/* 📱 MOBILE */
 @media (max-width: 768px) {
     .contact {
         padding: 45px 6%;
@@ -595,7 +568,6 @@ header {
     }
 }
 
-/* 📱 SMALL PHONES */
 @media (max-width: 480px) {
     .contact {
         padding: 40px 5%;
@@ -611,6 +583,7 @@ header {
         padding: 11px 12px;
     }
 }
+
 .social-links {
     margin-top: 40px;
     display: flex;
@@ -637,7 +610,6 @@ header {
     object-fit: contain;
 }
 
-/* Hover Effect */
 .social-links a:hover {
     background: #3B82F6;
     border-color: #3B82F6;
@@ -645,8 +617,9 @@ header {
 }
 
 .social-links a:hover img {
-    filter: brightness(0) invert(1); /* Make icons white on hover */
+    filter: brightness(0) invert(1);
 }
+
 @media (max-width: 768px) {
     .social-links {
         gap: 18px;
@@ -679,8 +652,6 @@ header {
     }
 }
 
-
-/* FOOTER */
 .footer {
     background: #000000;
     padding: 20px 10%;
