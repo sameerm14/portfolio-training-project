@@ -57,6 +57,5 @@ portfolio-website
 
 ## 👤 Author
 
-Sameer Nadaf  
-GitHub: https://github.com/sameerm14  
-LinkedIn: https://www.linkedin.com/in/sameer-nadaf-logged/
+Sameer Nadaf 
+[LinkedIn](https://www.linkedin.com/in/sameer-nadaf-logged/)
